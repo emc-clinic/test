@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMC — European Medical Center</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #ffffff; /* ✅ Белый фон */
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+        }
+
+        .logo {
+            width: 180px;
+            height: auto;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* ✅ Занимает весь экран по высоте */
+            padding: 0 20px;
+            position: relative;
+            background-color: #ffffff;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            opacity: 0.85; /* Легкое затемнение для читаемости текста */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3); /* ✅ Лёгкая тень для контраста */
+            z-index: 2;
+        }
+
+        .content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        p {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            line-height: 1.6;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .logo {
+                width: 140px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Логотип в верхнем левом углу -->
+    <div class="header">
+        <img src="emc-logoo.png" alt="EMC Logo" class="logo">
+    </div>
+
+    <!-- Главный блок — весь экран -->
+    <div class="hero">
+        <!-- Фоновая картинка -->
+        <img src="Doctors.png" alt="Врачи EMC" class="hero-image">
+
+        <!-- Полупрозрачный оверлей -->
+        <div class="overlay"></div>
+
+        <!-- Текст поверх всего -->
+        <div class="content">
+            <h1>Европейский Медицинский Центр</h1>
+            <p>Безупречная вежливость и внимательность персонала, сервис высочайшего уровня</p>
+        </div>
+    </div>
+
+    <!-- Скрипт виджета -->
+    <script src="https://admin.chatme.ai/widget/common.js" async data-widget-id="51c7042baa6c2e2a48f06de87c70f60b"></script>
+
+</body>
+</html>
